@@ -26,8 +26,8 @@ export default function Home() {
         {projects.map((project) => (
           // Setiap proyek bakal jadi satu "kartu" yang bisa diklik
           <Link
-            key={project.slug} // biar React gak bingung pas render
-            href={`/projects/${project.slug}`} // klik kartu ini bakal buka halaman detail proyek
+            key={project.id} // biar React gak bingung pas render
+            href={`/projects/${project.id}`} // klik kartu ini bakal buka halaman detail proyek
             style={{
               border: "1px solid #ddd", // kasih border tipis
               borderRadius: "12px", // biar sudutnya agak bulat

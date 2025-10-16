@@ -9,14 +9,14 @@ import projects from "../../../data/projects";
 export async function generateStaticParams() {
   // Loop semua proyek dan ambil slug-nya satu per satu
   // Hasilnya kayak: [{ slug: "smart-plant" }, { slug: "dino-game" }, ...]
-  return projects.map((p) => ({ slug: p.slug }));
+  return projects.map((p) => ({ id: p.id }));
 }
 
 // Komponen utama buat nampilin detail tiap proyek
 // "params" diambil otomatis dari URL (misal: /projects/dino-game)
-export default function ProjectDetail({ params }: { params: { slug: string } }) {
+export default function ProjectDetail({ params }: { params: { id: string } }) {
   // Nyari proyek yang slug-nya sama kayak yang ada di URL
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.id === params.id);
 
   // Kalau slug-nya gak ketemu di data, tampilkan pesan error
   if (!project) {
