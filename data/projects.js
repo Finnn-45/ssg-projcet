@@ -1,22 +1,22 @@
-const projects = [
+const experiences = [
   {
-    id: "smart-plant",
-    title: "🌿 Smart Plant Watering System",
-    description: "Sistem IoT yang menyiram tanaman otomatis berdasarkan kelembapan tanah.",
-    tech: ["ESP32", "DHT11", "Blynk"],
+    id: "urban-garden",
+    title: "🌱 Urban Gardening",
+    description: "Mengelola taman kecil di area terbatas, belajar menanam dan merawat berbagai tanaman.",
+    skills: ["Kreativitas", "Kesabaran", "Perawatan tanaman"],
   },
   {
-    id: "dino-game",
-    title: "🦖 Dino Game Arduino",
-    description: "Game sederhana di OLED display dengan karakter dino.",
-    tech: ["Arduino Nano", 'OLED 0.96"', "Push Button"],
+    id: "art-exhibit",
+    title: "🎨 Community Art Exhibit",
+    description: "Mengikuti pameran seni lokal untuk menampilkan karya lukisan dan ilustrasi.",
+    skills: ["Seni visual", "Kolaborasi", "Presentasi karya"],
   },
   {
-    id: "iot-dashboard",
-    title: "📊 IoT Monitoring Dashboard",
-    description: "Dashboard real-time untuk menampilkan data sensor dari ESP32.",
-    tech: ["Next.js", "Firebase", "Chart.js"],
+    id: "volunteer-cooking",
+    title: "🍲 Volunteer Cooking",
+    description: "Berkegiatan memasak untuk komunitas lokal dan kegiatan sosial.",
+    skills: ["Memasak", "Kerja tim", "Manajemen waktu"],
   },
 ];
 
-export default projects;
+export default experiences;

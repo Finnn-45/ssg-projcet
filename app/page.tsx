@@ -1,3 +1,4 @@
+"use client";
 // Import "Link" dari Next.js buat bikin navigasi antar halaman tanpa reload
 import Link from "next/link";
 
@@ -8,10 +9,10 @@ import projects from "../data/projects.js";
 export default function Home() {
   return (
     // Bagian utama halaman
-    <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
+    <main style={{ padding: "40px", fontFamily: "sans-serif", backgroundColor: "#f9f9f9", minHeight: "100vh" }}>
       {/* Judul di bagian atas halaman */}
-      <h1 style={{ fontSize: "2rem", marginBottom: "20px" }}>
-        🚀 My Project Gallery (SSG)
+      <h1 style={{ fontSize: "2rem", marginBottom: "20px", textAlign: "center", color: "black" }}>
+        🚀 My Experience Gallery
       </h1>
 
       {/* Tempat buat nampilin semua proyek dalam bentuk grid (kotak-kotak) */}
@@ -29,20 +30,25 @@ export default function Home() {
             key={project.id} // biar React gak bingung pas render
             href={`/projects/${project.id}`} // klik kartu ini bakal buka halaman detail proyek
             style={{
-              border: "1px solid #ddd", // kasih border tipis
-              borderRadius: "12px", // biar sudutnya agak bulat
-              padding: "20px", // jarak antara isi kartu dan tepi
-              textDecoration: "none", // hapus garis bawah di link
-              color: "inherit", // biar warnanya ikut warna teks utama
-              boxShadow: "0 2px 6px rgba(0,0,0,0.1)", // kasih bayangan halus di belakang kartu
-              transition: "transform 0.2s", // animasi halus kalau nanti dikasih efek hover
+              backgroundColor: "#fff", 
+              borderRadius: "12px", 
+              padding: "20px", 
+              textDecoration: "none",
+              color: "inherit", 
+              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              transition: "transform 0.2s, box-shadow 0.2s", 
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             {/* Judul proyek */}
-            <h2>{project.title}</h2>
+            <h2 style={{ marginBottom: "10px" , color : "black"}}>{project.title}</h2>
 
             {/* Deskripsi singkat proyek */}
-            <p>{project.description}</p>
+            <p style={{ color: "#555", lineHeight: "1.4" }}>{project.description}</p>
           </Link>
         ))}
       </div>
